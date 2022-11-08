@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    //Relación de 1 a * inversa
+    public function research(){
+        return $this->belongsTo(Research::class);
+    }
 }
