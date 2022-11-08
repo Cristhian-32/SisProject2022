@@ -21,8 +21,7 @@ class CategoryFactory extends Factory
     {
         $name=$this->faker->unique()->word(20);
         return [
-            'name'=>$name,
-
+            'name'=>$this->faker->randomElement(['articulo de revision', 'articulo de revision',])
             //
         ];
     }
