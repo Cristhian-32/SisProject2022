@@ -13,17 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('research', function (Blueprint $table) {
+        Schema::create('researchs', function (Blueprint $table) {
             $table->id();
-            $table->string('fecha');
+            $table->date('fecha');
             $table->string('fecha_inicio');
             $table->string('fecha_final');
             $table->string('title');
             $table->string('path');
             $table->string('calification');
-
-
-
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('area_id');
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
             $table->timestamps();
         });
     }
