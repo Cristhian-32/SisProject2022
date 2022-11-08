@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('persons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('male lastname');
-            $table->string('female lastname');
+            $table->string('male_lastname');
+            $table->string('female_lastname');
             $table->string('code');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('people');
+        Schema::dropIfExists('persons');
     }
 };

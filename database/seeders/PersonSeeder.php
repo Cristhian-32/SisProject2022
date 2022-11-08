@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Student;
+use App\Models\Person;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use PHPUnit\Framework\MockObject\Builder\Stub;
 
-class StudentSeeder extends Seeder
+class PersonSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,26 +15,28 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        Student::create([
+        Person::create([
             'name'=>'Eddy Daniel',
             'male_lastname'=>'Choquepata',
             'female_lastname'=>'Pineda',
             'code'=>'20200312',
+
         ]);
 
-        Student::create([
+        Person::create([
             'name'=>'Andre Paolo',
             'male_lastname'=>'Luque',
             'female_lastname'=>'Alfaro',
             'code'=>'20200314',
+
         ]);
 
-        Student::create([
+        Person::create([
             'name'=>'Aldhair',
             'male_lastname'=>'Huaquisto',
             'female_lastname'=>'Coila',
             'code'=>'20200356',
+
         ]);
-        
     }
 }

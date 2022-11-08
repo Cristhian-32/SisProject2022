@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StudentPostRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ class StudentController extends Controller
 
         return response()->json([
             'message' => "record saved successfully!",
-            'school' => $student
+            'student' => $student
         ], 200);
     }
 
@@ -32,7 +33,7 @@ class StudentController extends Controller
 
         return response()->json([
             'message' => "record updated successfully!",
-            'school' => $student
+            'student' => $student
         ], 200);
     }
 

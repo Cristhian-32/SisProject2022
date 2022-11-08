@@ -14,7 +14,7 @@ class Observation extends Model
         return $this->belongsTo(Research::class);
     }
 
-     //Relacion de 1 a 1 inveresa
+    //Relacion de 1 a 1 inveresa
      public function participant(){
         return $this->hasOne(Participant::class);
     }
